@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+   gophish:
+      volumes:
+         - ./endpoint:/opt/gophish/static/endpoint
+         - ./db/gophish.db:/opt/gophish/gophish.db
+      ports:
+         - 3333:3333
+         - 80:80
+      container_name: gophish
+      image: gophish/gophish
+
